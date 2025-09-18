@@ -35,7 +35,7 @@ namespace DataStructureTests
         public void ContainsPerson_WhenListEmpty_ShouldReturnFalse()
         {
             Person person = new Person("Petra", "Müller", "Weiblich", 32);
-            Assert.IsFalse(list.Contains(person), "Die leere Liste sollte keine Person enthalten!");
+            Assert.IsFalse(list.Contains(person), "Die leere Liste sollte keine Person enthalten.");
         }
 
         [Test]
