@@ -15,7 +15,7 @@ namespace DataStructureTests
         }
 
         [Test]
-        public void AddPerson_ShouldAddPersonToList()
+        public void AddPerson_ShouldAddPersonToTheList()
         {
             Person person = new Person("Lars", "Veljaca", "Männlich", 17);
             list.Add(person);
@@ -23,19 +23,19 @@ namespace DataStructureTests
         }
 
         [Test]
-        public void ContainsPerson_WhenPersonNotInList_ShouldReturnFalse()
+        public void ContainsPerson_WhenListIsEmpty_ReturnFalse()
+        {
+            Person person = new Person("Petra", "Müller", "Weiblich", 32);
+            Assert.IsFalse(list.Contains(person), "Die leere Liste sollte keine Person enthalten.");
+        }
+
+        [Test]
+        public void ContainsPerson_WhenPersonNotInTheList_ReturnFalse()
         {
             Person person1 = new Person("Lars", "Veljaca", "Männlich", 17);
             Person person2 = new Person("Ferdinand", "Willi", "Männlich", 30);
             list.Add(person1);
             Assert.IsFalse(list.Contains(person2), "Die Person sollte nicht in der Liste sein.");
-        }
-
-        [Test]
-        public void ContainsPerson_WhenListEmpty_ShouldReturnFalse()
-        {
-            Person person = new Person("Petra", "Müller", "Weiblich", 32);
-            Assert.IsFalse(list.Contains(person), "Die leere Liste sollte keine Person enthalten!");
         }
 
         [Test]
